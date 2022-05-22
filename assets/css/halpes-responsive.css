@@ -15,11 +15,18 @@
 
 */
 
+
+
 /* Medium screen 1024 */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .welcome-one__right .section-title__title {
         font-size: 39px;
         line-height: 49px;
+    }
+
+    .page-header .container{
+        padding-top: 300px;
+        padding-bottom: 132px;
     }
 
     .introduction{
@@ -213,7 +220,8 @@
     }
 
     .causes-details__download {
-        padding: 50px 35px 50px;
+        padding: 50px 20px 50px;
+        flex-direction: column;
     }
 
     .causes-details__left .text h4 {
@@ -279,6 +287,10 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .welcome-one__right {
         margin-top: 0px;
+    }
+
+    .about-page__img img{
+        margin-top: 50px;
     }
 
     .join-one__title {
@@ -547,6 +559,14 @@
 @media only screen and (max-width: 767px) {
     .section-title__title br {
         display: none;
+    }
+
+    .projects-drop{
+        display: none;
+    }
+
+    .causes-details__images-box{
+        margin-bottom: 0px;
     }
 
     .helping-one{
@@ -1116,12 +1136,24 @@
     }
 
     .causes-details__text-box h3 {
-        font-size: 29px;
+        font-size: 7vw;
         line-height: 39px;
+        margin-bottom: 10px;
     }
 
-    .causes-details__summary-list-box li .text p {
-        font-size: 17px;
+    .causes-details__text-2{
+        font-size: 4.2vw;
+        text-align: justify;
+    }
+
+    .causes-details__summary-list-box li .text p{
+        font-size: 4.2vw;
+        text-align: justify;
+    }
+
+    .causes-details__left .text h4{
+        font-size: 6vw;
+        text-align: center;
     }
 
     .causes-details__share {
@@ -1134,16 +1166,48 @@
     }
 
     .causes-details__download {
-        padding: 50px 20px 50px;
+        padding: 50px 20px 0px;
         flex-direction: column;
     }
 
     .causes-details__download-btn {
-        margin-top: 20px;
+
     }
 
     .comment-one__single {
         flex-direction: column;
+    }
+
+    .causes-details__organizer-content p {
+        font-size: 3.3vw;
+    }
+
+    .causes-details__organizer-content h5{
+        font-size: 4.1vw;
+    }
+
+    .causes-details__organizer-list li{
+        font-size: 3.5vw;
+    }
+
+    .causes-details__donations-title{
+        font-size: 5vw;
+    }
+
+    .causes-details__donations-content h4{
+        font-size: 4.5vw;
+    }
+
+    .causes-details__donations-content h5{
+        font-size: 4vw;
+    }
+
+    .causes-details__donations-content span{
+        font-size: 2.8vw;
+    }
+
+    .causes-details__donations-content p{
+        font-size: 4vw;
     }
 
     .comment-one__content {
@@ -1236,7 +1300,7 @@
     }
 
     .contact-page .section-title__title {
-        font-size: 24px;
+        font-size: 6.5vw;
         line-height: 34px;
     }
 
@@ -1380,10 +1444,63 @@
         margin: 0 0 20px;
     }
 
+    .about-page__right .section-title__title{
+        font-size: 8.2vw;
+    }
 
+    .about-page__right-text{
+        font-size: 4.2vw;
+        text-align: justify;
+    }
 
+    .about-page__right-title{
+        font-size: 5.4vw;
+    }
 
+    .about-five__progress h3{
+        font-size: 5vw;
+    }
 
+    .testimonial-one{
+        padding: 120px 0 100px;
+    }
+
+    .about-page__left{
+        margin-left: 0px;
+    }
+
+    .about-page__right{
+        margin-right: 0px;
+    }
+
+    .about-page__img img{
+        margin-top: 50px;
+    }
+
+    .contact-page__text{
+        text-align: justify;
+        font-size: 4vw;
+    }
+
+    .contact-page__contact-list li .icon{
+        font-size: 33px;
+    }
+
+    .contact-page__contact-list li .text a{
+        font-size: 4.5vw;
+    }
+
+    .contact-page__contact-list li .text h5{
+        font-size: 4.5vw;
+    }
+
+    .needhelp-padding-top{
+        padding-top: 40px;
+    }
+
+    .become-volunteer__left>h2{
+        font-size: 6.3vw;
+    }
 
 
 
@@ -1417,6 +1534,11 @@
 
     .three-boxes__icon span {
         top: 4px;
+    }
+
+    .page-header .container{
+        padding-top: 300px;
+        padding-bottom: 132px;
     }
 
 
