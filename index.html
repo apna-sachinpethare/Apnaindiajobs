@@ -992,11 +992,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div class="col-lg-12">
                                         <Select type="text" id="project" class="form-control" name="Project" placeholder="Select Project" required>
                                             <option value="">Select Project</option>
-                                            <option value="Basic Typing Project">Basic Typing Project</option>
-                                            <option value="Basic Typing Project">Basic+ Typing Project</option>
-                                            <option value="Standard Typing Project">Standard Typing Project</option>
-                                            <option value="Premium Typing Project">Premium Typing Project</option>
-                                            <option value="Special Typing Project">Special Typing Project</option>
+                                            <option value="Snippet Entry Job">Snippet Entry Job</option>
+                                            <option value="Data Entry Job">Data Entry Job</option>
+                                            <option value="Form Filling Job">Form Filling Job</option>
+                                            <option value="Page Typing Job (Weekly)">Page Typing Job (Weekly)</option>
+                                            <option value="Page Typing Job (Monthly)">Page Typing Job (Monthly)</option>
                                         </select>
                                     </div>
                                     <div class="col-lg-12">
@@ -1018,7 +1018,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Now, choose the project you want to work on and pay the security deposit to start work"))
+                .then(response => alert("Registration Successful! Now choose the project you want to work on and pay the security deposit to start work"))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
