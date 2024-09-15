@@ -1046,17 +1046,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <button type="submit" name="submit" class="thm-btn helping-one__right-btn"><i
                                                 class="fas fa-arrow-circle-right"></i>Apply For Job</button>
 
-                                                <script>
-            const scriptURL =  'https://script.google.com/macros/s/AKfycbxs0N9r-Mp-p4O5A7DfHM52WSpgRdl65JspjoKH3P0xs1HF_20/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Registration Successful! Now choose the project you want to work on and pay the security deposit to start work."))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
+
                                     </div>
                                 </div>
                             </form>
@@ -1066,6 +1056,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
         <!--Helping One End-->
+
+
+
+
+
+
+
+        <div class="modal fade" id="customAlertModal" tabindex="-1" role="dialog" aria-labelledby="customAlertModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customAlertModalLabel">Select Your Project</h5>
+                <div class="vertical-line"></div>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Your registration is complete! Next, please select the project you want to work on and pay the security deposit to start your work.
+            </div>
+            <div style="margin: auto;" class="modal-footer">
+                <button type="button" style="outline: none; border: none; margin: 0px;" class="main-menu__donate-btn" data-dismiss="modal" onclick="redirectToPage()">Select Project</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxs0N9r-Mp-p4O5A7DfHM52WSpgRdl65JspjoKH3P0xs1HF_20/exec';
+    const form = document.forms['google-sheet'];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                // Show the custom modal
+                $('#customAlertModal').modal('show');
+
+                // Attach a click event listener to the close button
+                $('.close').on('click', function () {
+                    $('#customAlertModal').modal('hide');
+                });
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+
+    // Function to redirect when OK button in the modal is clicked
+    function redirectToPage() {
+        window.location.href = 'https://apnaindiajobs.in/projects'; // Replace with your desired URL
+    }
+</script>
+
+
+
+
+
 
         <!--Events One Start-->
         <section id="recent-payment-proofs" class="events-one">
