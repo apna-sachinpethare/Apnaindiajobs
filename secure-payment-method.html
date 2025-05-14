@@ -260,6 +260,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img class="img-fluid" src="assets/images/resources/payment-method.jpg" alt="apna-india-payment-method">
           </div>
 
+		<!-- UPI Payment Section -->
+
+<div style="display: block;" class="col-lg-12">
+<div class="upi-payment-section" style="margin-top: 30px; text-align: center; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+    <h2 style="font-size: 1.5rem; font-weight: 600; color: #333;">Pay via UPI ID</h2>
+    <p style="font-size: 1rem; color: #555;">QR code supports payments up to ₹2000 only. For plans ₹3520 and ₹4890, use the UPI ID below:</p>
+    
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <input type="text" id="upiId" value="rahulpethare735184.rzp@rxairtel" readonly style="padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; text-align: center; width: 100%; max-width: 300px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1);">
+        <button onclick="copyUPI()" style="padding: 10px 15px; font-size: 0.9rem; background-color: #138808; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; max-width: 300px; box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;">Copy UPI ID</button>
+    </div>
+    
+    <p id="copyMessage" style="margin-top: 10px; font-size: 0.9rem; color: #138808; display: none;">UPI ID Copied!</p>
+    <p style="margin-top: 10px; font-size: 0.9rem; color: #888;">Use any UPI app (PhonePe, Google Pay, Paytm) and enter this UPI ID to make the payment.</p>
+</div>
+
+<!-- JavaScript for Copy Button -->
+<script>
+function copyUPI() {
+    var upiInput = document.getElementById("upiId");
+    navigator.clipboard.writeText(upiInput.value).then(function() {
+        var copyMessage = document.getElementById("copyMessage");
+        copyMessage.style.display = "block";
+        setTimeout(function() {
+            copyMessage.style.display = "none";
+        }, 2000);
+    });
+}
+</script>
+</div>
+
+
           <div class="email-spam">
             <div class="inside-email-spam">
               <p><span style="font-weight: 900; color: red; ">Note:</span> We hope this message finds you well. We would like to inform you that after successful payment of your security deposit fees, you will get your project within 24 hours. Once your plan is activated, we will provide you with the data on the email ID that you have shared with us. The subject line of this email is <i>"Rojgaar Bharat: Your Plan is Now Activated".</i></p>
